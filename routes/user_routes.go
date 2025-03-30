@@ -16,7 +16,7 @@ func (n *User_routes) Init_user_routes(route *gin.Engine) {
 	user.POST("/login",controllers.Login)
 	user.Use(middlewares.AuthMiddleware())
 
-	user.GET("/all", n.user_controller.GetUsers())
+	// user.GET("/all", n.user_controller.GetUsers())
 	// user.GET("/:id", n.user_controller.GetUserById())
 	// user.DELETE("/:id", n.user_controller.DeleteUserById())
 	user.PUT("/:id", n.user_controller.UpdateUser())
